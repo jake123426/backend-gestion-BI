@@ -11,7 +11,7 @@ const { Sequelize } = require('sequelize');
 
 const fs = require('fs');
 const rdsCa = fs.readFileSync(__dirname + '/rds-combined-ca-bundle.pem');
-
+require('pg')
 var options = {
     host: process.env.PRODUCTION_HOST,
     port: process.env.DB_PORT,
